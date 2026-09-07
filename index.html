@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdun Nayeem — Football Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --accent: #e2621f;
+  --ink: #f2f0ed;
+  --paper: #141312;
+  --paper-raised: #1d1c1a;
+  --line: #34322e;
+  --muted: #a8a29a;
+}
+:root[data-theme="light"] {
+  --ink: #1a1816; --paper: #faf9f7; --paper-raised: #f0eee9; --line: #e2ded7; --muted: #5c5750;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: 'Source Sans 3', -apple-system, sans-serif;
+  line-height: 1.65; -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+header { padding: 72px 0 48px; border-bottom: 1px solid var(--line); }
+h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: clamp(34px, 7vw, 54px);
+  margin: 0 0 14px; line-height: 1.05;
+}
+p.role { font-size: 18px; color: var(--muted); margin: 0 0 22px; max-width: 55ch; }
+.links { display: flex; gap: 18px; flex-wrap: wrap; }
+.links a {
+  font-size: 14.5px; font-weight: 600; color: var(--ink);
+  text-decoration: none; border-bottom: 2px solid var(--accent); padding-bottom: 2px;
+}
+main { padding: 48px 0 60px; }
+h2.section-label {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+  font-size: 15px; text-transform: none; color: var(--muted);
+  margin: 0 0 24px; letter-spacing: 0.01em;
+}
+.card {
+  display: block; text-decoration: none; color: var(--ink);
+  background: var(--paper-raised); border: 1px solid var(--line);
+  border-radius: 8px; padding: 26px 26px; margin-bottom: 20px;
+  transition: border-color 0.15s ease;
+}
+.card:hover { border-color: var(--accent); }
+.card .tag { font-size: 13px; color: var(--accent); font-weight: 600; margin: 0 0 8px; }
+.card h3 {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+  font-size: 24px; margin: 0 0 10px; line-height: 1.2;
+}
+.card p { font-size: 15px; color: var(--muted); margin: 0; max-width: 65ch; }
+footer { border-top: 1px solid var(--line); padding: 26px 0 48px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <h1>Abdun Nayeem</h1>
+  <p class="role">Football data analysis, built from public event and tracking data — passing networks, tactical breakdowns, and season-long player profiling.</p>
+  <div class="links">
+    <a href="https://github.com/nayeem92" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.kaggle.com/abdunnayeemkhan" target="_blank" rel="noopener">Kaggle</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2 class="section-label">Reports</h2>
+
+  <a class="card" href="reports/bayer-leverkusen-2023-24.html">
+    <p class="tag">Season analysis · Bundesliga 2023/24</p>
+    <h3>What actually held Bayer Leverkusen's unbeaten season together</h3>
+    <p>34 matches, one league title, zero losses — tested against event and 360° tracking data instead of the usual highlight-reel narratives.</p>
+  </a>
+
+  <a class="card" href="reports/inter-miami-passing-game.html">
+    <p class="tag">Match analysis · MLS</p>
+    <h3>Dissecting a winning team's passing game</h3>
+    <p>Inter Miami 4–0 Toronto FC, broken down as a full passing network to find who actually controlled the game.</p>
+  </a>
+</main>
+
+<footer class="wrap">More reports added as new analysis is published.</footer>
+</body>
+</html>
